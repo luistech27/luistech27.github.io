@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad de Jarvis</title>
+<meta name="description" content="Qué datos de Google usa Jarvis, para qué y dónde se guardan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Tokens de docs/design/tokens.css (tema oscuro por defecto, claro según el sistema). */
+  :root {
+    --bg-000: #07090c; --bg-100: #0d1117; --line: #2a2f36;
+    --ink: #f2ede4; --ink-muted: #9a9384;
+    --amber-500: #ffa31a; --amber-300: #ffc56b;
+    --space-2: 8px; --space-4: 16px; --space-6: 24px; --space-8: 32px;
+    --font-display: "Chakra Petch", "Rajdhani", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-000: #f6f2ea; --bg-100: #ffffff; --line: #d9cfbf;
+      --ink: #1a1611; --ink-muted: #5e5648;
+      --amber-500: #a65200; --amber-300: #d97a00;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: var(--space-8) var(--space-4);
+    background-color: var(--bg-000);
+    background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: var(--space-4) var(--space-4);
+    color: var(--ink); font: 400 15px/22px var(--font-display);
+  }
+  .panel {
+    position: relative; max-width: 720px; margin: 0 auto; padding: var(--space-8) var(--space-6);
+    background: var(--bg-100); border: 1px solid var(--line);
+  }
+  .panel::before, .panel::after { content: ""; position: absolute; width: 14px; height: 14px; border: 0 solid var(--amber-300); }
+  .panel::before { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
+  .panel::after { bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; }
+  .label { margin: 0 0 var(--space-2); font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
+  h1 { margin: 0 0 var(--space-2); font-size: 32px; line-height: 38px; font-weight: 600; }
+  h2 { margin: var(--space-8) 0 var(--space-2); font-size: 22px; line-height: 28px; font-weight: 600; }
+  .fecha { font: 500 13px/18px var(--font-mono); color: var(--ink-muted); margin: 0 0 var(--space-6); }
+  p { margin: 0 0 var(--space-4); }
+  ul { margin: 0 0 var(--space-4); padding-left: var(--space-6); }
+  li { margin-bottom: var(--space-2); }
+  a { color: var(--amber-500); }
+  footer { margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--line); font-size: 12px; line-height: 16px; color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<main class="panel">
+  <p class="label">Jarvis · Asistente personal privado</p>
+  <h1>Política de privacidad</h1>
+  <p class="fecha">Última actualización: 7 de octubre de 2026</p>
+
+  <p>Jarvis es un asistente personal de uso privado. Corre en la computadora de su dueño y solo lo usa él, con su propia cuenta de Google. No es un servicio abierto al público ni tiene usuarios registrados.</p>
+
+  <h2>Qué datos de Google usa</h2>
+  <ul>
+    <li><strong>Gmail:</strong> buscar, leer y resumir correos, crear borradores y, con confirmación del dueño, enviar, archivar o etiquetar.</li>
+    <li><strong>Google Calendar:</strong> consultar la agenda y, con confirmación, crear o cambiar eventos.</li>
+    <li><strong>Google Drive, Docs y Sheets:</strong> buscar y leer archivos y, con confirmación, crearlos, subirlos o modificarlos.</li>
+    <li><strong>Datos básicos de la cuenta</strong> (correo y nombre): para saber qué cuenta está conectada.</li>
+  </ul>
+
+  <h2>Para qué los usa</h2>
+  <p>Solo para cumplir lo que el propio dueño le pide y para avisarle cuando llega un correo nuevo. Jarvis no usa estos datos para publicidad, no los vende y no crea perfiles.</p>
+
+  <h2>Dónde se guardan</h2>
+  <p>Las credenciales de acceso a Google y el estado de Jarvis se guardan solo en la computadora del dueño. Jarvis no tiene servidores ni bases de datos propias en la nube.</p>
+
+  <h2>Con quién se comparten</h2>
+  <ul>
+    <li><strong>Modelos de inteligencia artificial:</strong> para entender y responder cada pedido, Jarvis envía el texto necesario (por ejemplo, el contenido de un correo que hay que resumir) a modelos de IA a través de OpenCode Zen. Esos proveedores aplican sus propias políticas.</li>
+    <li><strong>Discord:</strong> los avisos (remitente, asunto y un resumen corto) se envían al servidor y a los mensajes directos privados del dueño.</li>
+  </ul>
+  <p>No se comparten datos con nadie más.</p>
+
+  <h2>Uso limitado</h2>
+  <p>El uso y la transferencia de la información recibida de las API de Google a cualquier otra aplicación se ajustan a la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de las API de Google</a>, incluidos los requisitos de uso limitado.</p>
+
+  <h2>Cómo retirar el acceso</h2>
+  <p>El dueño puede quitarle el acceso a Jarvis en cualquier momento desde <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> y borrar las credenciales guardadas en su computadora.</p>
+
+  <h2>Contacto</h2>
+  <p>Por el correo de asistencia que aparece en la pantalla de consentimiento de Google de Jarvis.</p>
+
+  <footer><a href="index.html">← Volver a Jarvis</a></footer>
+</main>
+</body>
+</html>
